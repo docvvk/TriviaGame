@@ -1,13 +1,13 @@
 .answerchoice {
   border: 1px solid black;
-  border-radius: 5%;
-  width: 40%;
-  color: black;
+  border-radius: 25%;
+  width: 50%;
+  color: rgb(39, 2, 2);
   text-align: center;
   margin: 10px auto;
-  font-size: 20px;
-  background-color: white;
-
+  font-size: 25px;
+  background-color: #ffffffb6;
+  cursor: pointer;
 }
 
 img {
@@ -17,12 +17,17 @@ img {
 
 #answerblock {
   text-align: center;
-
+  font-weight: 600;
 }
 
 #questionblock {
+  color: rgb(208, 255, 0);
   text-align: center;
   font-weight: bold;
+}
+#timeleft {
+    color: aqua;
+    font-weight: bold;
 }
 
 #reset {
@@ -30,42 +35,48 @@ img {
 }
 
 body {
-  background-image: url("../images/bg-soccer-2.jpg");
+  background-image: url("../images/bg-soccer-6.jpg");
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 h1 {
+  font-family: 'Monoton';
   text-align: center;
-  color: white;
-  font-weight: bolder;
+  color: rgb(42, 252, 0);
+  /* font-weight: bolder; */
   padding: 20px;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 p {
   margin: 10px;
   font-weight: bold;
-  color: red;
-  font-size: 20px;
+  color: rgb(244, 221, 250);
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 h2, h4 {
+  color: rgb(255, 204, 0);
   margin: 30px;
-  font-weight: bold;
+  font-weight: 520;
 }
 
 .wrapper {
   margin: 10px auto;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid #403fd3;
+  background-color: rgba(48, 45, 46, 0.536);
+  /* border: 2px  #ffffff; */
   height: 500px;
   width: 60%;
   text-align: center;
 }
 
 .btn {
+  font-size: 25px;
+  font-weight: 530;  
   position: relative;
-  bottom: -150px;
+  bottom: -100px;
 }

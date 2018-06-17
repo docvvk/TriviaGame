@@ -76,7 +76,7 @@ $(function(){
         var correctCount = 0;
         var wrongCount = 0;
         var unanswerCount = 0;
-        var timer = 20;
+        var timer = 30;
         var intervalId;
         var userGuess ="";
         var running = false;
@@ -85,12 +85,14 @@ $(function(){
         var index;
         var newArray = [];
         var holder = [];
+        var fifaSound = new Audio(src="assets/sounds/ChasingCars.mp3");
         
         
         
         $("#reset").hide();
         //click start button to start game
         $("#start").on("click", function () {
+                fifaSound.play();
                 $("#start").hide();
                 displayQuestion();
                 runTimer();
@@ -174,7 +176,7 @@ $(function(){
         
             var hidpic = setTimeout(function() {
                 $("#answerblock").empty();
-                timer= 20;
+                timer= 30;
         
             //run the score screen if all questions answered
             if ((wrongCount + correctCount + unanswerCount) === qCount) {
