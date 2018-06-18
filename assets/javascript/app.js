@@ -45,7 +45,7 @@ $(function(){
         {
             question: "Which country has the most World Cup wins?",
             choice: ["Germany", "Italy", "Brazil", "Spain"],
-            answer: 3,
+            answer: 2,
             photo: "assets/images/giphy8.gif"
         },
         {
@@ -86,28 +86,27 @@ $(function(){
         var newArray = [];
         var holder = [];
         var fifaSound = new Audio(src="assets/sounds/ChasingCars.mp3");
-        
-        
+
         
         $("#reset").hide();
         //click start button to start game
         $("#start").on("click", function () {
-                fifaSound.play();
+                // fifaSound.play();
                 $("#start").hide();
                 displayQuestion();
                 runTimer();
                 for(var i = 0; i < options.length; i++) {
             holder.push(options[i]);
         }
-            })
-        //timer start
-        function runTimer(){
-            if (!running) {
-            intervalId = setInterval(decrement, 1000); 
-            running = true;
+        });
+       
+        //timer starts
+        function runTimer() {
+            if(!running) {
+                intervalId = setInterval(decrement, 1000);
+                running = true;
             }
         }
-        //timer countdown
         function decrement() {
             $("#timeleft").html("<h3>Time remaining: " + timer + "</h3>");
             timer --;
@@ -157,7 +156,6 @@ $(function(){
                 userGuess="";
                 $("#answerblock").html("<p>Correct!</p>");
                 hidepicture();
-        
             } else {
                 stop();
                 wrongCount++;
@@ -167,8 +165,6 @@ $(function(){
             }
         });
         }
-        
-        
         function hidepicture () {
             $("#answerblock").append("<img src=" + pick.photo + ">");
             newArray.push(pick);
@@ -180,6 +176,7 @@ $(function(){
         
             //run the score screen if all questions answered
             if ((wrongCount + correctCount + unanswerCount) === qCount) {
+                $("#timeleft").empty();
                 $("#questionblock").empty();
                 $("#questionblock").html("<h3>Game Over!  Here's how you did: </h3>");
                 $("#answerblock").append("<h4> Correct: " + correctCount + "</h4>" );
@@ -205,7 +202,6 @@ $(function(){
             }
             runTimer();
             displayQuestion();
-        
         })
         
     })
