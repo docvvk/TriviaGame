@@ -91,7 +91,7 @@ $(function(){
         $("#reset").hide();
         //click start button to start game
         $("#start").on("click", function () {
-                // fifaSound.play();
+                fifaSound.play();
                 $("#start").hide();
                 displayQuestion();
                 runTimer();
