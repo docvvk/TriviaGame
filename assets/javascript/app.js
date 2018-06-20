@@ -49,7 +49,7 @@ $(function(){
             photo: "assets/images/giphy8.gif"
         },
         {
-            question: "In what year was the World Cup held in Africa for the firsr time?",
+            question: "In what year was the World Cup held in Africa for the first time?",
             choice: ["2010", "2002", "1998", "1990"],
             answer: 0,
             photo: "assets/images/giphy9.gif"
@@ -85,7 +85,7 @@ $(function(){
         var index;
         var newArray = [];
         var holder = [];
-        var fifaSound = new Audio(src="assets/sounds/ChasingCars.mp3");
+        var fifaSound = new Audio(src="assets/sounds/Coupe.mp3");
 
         
         $("#reset").hide();
